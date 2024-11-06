@@ -1,7 +1,7 @@
 export const socialMedia = [
   {
     name: 'linkedIn',
-    link: 'https://www.linkedin.com/in/sujaygowda/',
+    link: 'https://www.linkedin.com/in/khalidreact/',
   },
   {
     name: 'instagram',
@@ -9,14 +9,14 @@ export const socialMedia = [
   },
   {
     name: 'github',
-    link: 'https://github.com/SujayGowdaa',
+    link: 'https://github.com/dreambigatall',
   },
   {
     name: 'telegram',
-    link: 'https://t.me/sujay_gowda',
+    link: 'https://t.me/HM_Empire_official',
   },
   {
-    name: 'behance',
-    link: 'https://www.behance.net/sujaygowda',
+    name: 'X',
+    link: 'https://x.com/K_a_l_i_d_M',
   },
 ];

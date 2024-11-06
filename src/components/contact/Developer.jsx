@@ -5,7 +5,7 @@ export default function Developer() {
         designed & developed by
       </span>
       <span className=' text-xs font-semibold text-center font-vietnam uppercase xs:text-left bg-clip-text text-transparent bg-gradient-to-r from-gold-light to-gold-dark xs:text-base '>
-        sujay gowda
+        Khalid Mohammed
       </span>
     </div>
   );

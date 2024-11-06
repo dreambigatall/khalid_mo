@@ -9,7 +9,7 @@ export default function CtaButtons() {
       <ButtonPop>
         <Links
           className={` group bg-gradient-to-r from-gold-light to-gold-dark transition-all duration-100 shadow-btn-main text-background hover:outline hover:outline-[1px] hover:outline-accent`}
-          to='mailto:sujaygowda.dev@gmail.com'
+          to='mailto:halidmahammed.16.hm@gmail.com'
         >
           let&apos;s work together
           <TbMailUp className=' transition-all duration-100 text-xl group-hover:text-text' />
@@ -20,7 +20,7 @@ export default function CtaButtons() {
           className={
             ' transition-all duration-100  text-text min-w-[228px] group'
           }
-          to={'/resume/sujaygowda.pdf'}
+          to={'/resume/khalidmohammed.pdf'}
         >
           download resume
           <MdOutlineFileDownload className='transition-all text-xl group-hover:text-accent' />

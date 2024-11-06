@@ -1,14 +1,35 @@
-<svg width="60" height="61" viewBox="0 0 60 61" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M15.7797 6.21573L21.7469 0.25L0.3125 0.25L0.3125 38.9523L32.5828 6.21573H41.0438L6.22031 41.3806V37.1836L0.3125 43.2992L0.3125 55.9502L55.3828 0.25L30.2375 0.25L6.22031 24.4427L6.22031 6.21573H15.7797Z" fill="url(#paint0_linear_148_44)"/>
-<path d="M4.40938 60.2371L59.6875 4.38704V36.1643L53.75 36.1943V18.9566L18.8078 54.2414H53.75V48.0958H33.2359L39.0547 42.22L59.6875 42.19V60.2371H4.40938Z" fill="url(#paint1_linear_148_44)"/>
-<defs>
-<linearGradient id="paint0_linear_148_44" x1="60" y1="60" x2="0.62164" y2="-0.609021" gradientUnits="userSpaceOnUse">
-<stop stop-color="#966020"/>
-<stop offset="1" stop-color="#EFCC73"/>
-</linearGradient>
-<linearGradient id="paint1_linear_148_44" x1="60" y1="60" x2="0.62164" y2="-0.609021" gradientUnits="userSpaceOnUse">
-<stop stop-color="#966020"/>
-<stop offset="1" stop-color="#EFCC73"/>
-</linearGradient>
-</defs>
+<!-- <svg width="60" height="61" viewBox="0 0 60 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M15.7797 6.21573L21.7469 0.25L0.3125 0.25L0.3125 38.9523L32.5828 6.21573H41.0438L6.22031 41.3806V37.1836L0.3125 43.2992L0.3125 55.9502L55.3828 0.25L30.2375 0.25L6.22031 24.4427L6.22031 6.21573H15.7797Z" fill="url(#paint0_linear)"/>
+  <path d="M4.40938 60.2371L59.6875 4.38704V36.1643L53.75 36.1943V18.9566L18.8078 54.2414H53.75V48.0958H33.2359L39.0547 42.22L59.6875 42.19V60.2371H4.40938Z" fill="url(#paint1_linear)"/>
+  
+  <defs>
+    <linearGradient id="paint0_linear" x1="60" y1="60" x2="0.62164" y2="-0.609021" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#966020"/>
+      <stop offset="1" stop-color="#EFCC73"/>
+    </linearGradient>
+    <linearGradient id="paint1_linear" x1="60" y1="60" x2="0.62164" y2="-0.609021" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#966020"/>
+      <stop offset="1" stop-color="#EFCC73"/>
+    </linearGradient>
+  </defs>
+</svg> -->
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Hexagonal Border -->
+  <polygon points="100,10 160,50 160,150 100,190 40,150 40,50" fill="none" stroke="#5A4638" stroke-width="8"/>
+  <polygon points="100,25 145,55 145,145 100,175 55,145 55,55" fill="none" stroke="#C49A5A" stroke-width="4"/>
+
+  <!-- K Letter -->
+  <path d="M70 40 L90 40 L90 80 L110 50 L130 50 L100 85 L130 120 L110 120 L90 95 L90 150 L70 150 Z" fill="#C49A5A" stroke="#5A4638" stroke-width="2"/>
+
+  <!-- M Letter -->
+  <path d="M140 40 L160 40 L160 150 L140 150 L140 80 L125 110 L110 80 L110 150 L90 150 L90 40 L110 40 L125 75 Z" fill="#C49A5A" stroke="#5A4638" stroke-width="2"/>
+
+  <!-- I Letter (stylized) -->
+  <!-- <rect x="130" y="40" width="20" height="110" fill="#C49A5A" stroke="#5A4638" stroke-width="2"/> -->
 </svg>
+
+
+
+
+
+
