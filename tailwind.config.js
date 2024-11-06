@@ -31,7 +31,7 @@ export default {
         "btn-main": " 0px 0px 8px 4px var(--shadow)",
         "btn-active": " 0px 0px 4px 2px var(--shadow)",
         card: " 0px 0px 6px 3px var(--shadow)",
-        xp: " 0px 8px 4px -4px var(--shadow)",
+        xp: " 0px 8px 4px -5px var(--shadow)",
       },
       padding: {
         26: "104px",
