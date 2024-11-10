@@ -2,14 +2,12 @@ import Container from '../../ui/Container';
 import PageTitle from '../../ui/PageTitle';
 import PageTitleSecondary from '../../ui/PageTitleSecondary';
 
-import banner1 from '../../assets/aboutBanner/banner1.jpg';
-import banner2 from '../../assets/aboutBanner/banner2.jpg';
+
 import Skills from '../../ui/Skills';
 import { skills } from '../../skills';
 import Paragraph from '../../ui/Paragraph';
 import FollowMe from '../../ui/FollowMe';
 import { motion } from 'framer-motion';
-import i4sight from "../../assets/projectCover/i4sight.png"
 
 const {
   skillOne: { field: skillOneField },
@@ -96,14 +94,7 @@ export default function AboutContainer() {
           },
         }}
       >
-        <PageTitleSecondary title={'hobbies'} />
-        <Paragraph className={' text-center xs:text-left'}>
-          Beyond my professional pursuits, I value personal growth and
-          well-being through a variety of interests and hobbies. These include
-          maintaining a healthy lifestyle with fitness activities, developing my
-          creative skills in design and editing, and finding relaxation in
-          recreational gaming.
-        </Paragraph>
+        
       </motion.div>
       <motion.div
         className=' overflow-hidden outline outline-[1px] outline-background '

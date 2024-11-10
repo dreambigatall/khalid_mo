@@ -4,8 +4,8 @@ export const socialMedia = [
     link: 'https://www.linkedin.com/in/khalidreact/',
   },
   {
-    name: 'instagram',
-    link: 'https://www.instagram.com/sujaygowda_/',
+    name: 'LeetCode',
+    link: 'https://leetcode.com/u/user1103xR/',
   },
   {
     name: 'github',
@@ -16,7 +16,7 @@ export const socialMedia = [
     link: 'https://t.me/HM_Empire_official',
   },
   {
-    name: 'X',
+    name: 'twitter/X',
     link: 'https://x.com/K_a_l_i_d_M',
   },
 ];

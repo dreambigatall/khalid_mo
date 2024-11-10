@@ -13,6 +13,7 @@ export default function App() {
   const router = createBrowserRouter([
     {
       path: "/",
+      
       element: <AppLayout />,
       children: [
         {

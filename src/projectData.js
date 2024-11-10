@@ -1,6 +1,5 @@
-//import frontendFusion from "./assets/projectCover/frontend-fusion.png";
-//import cheffest from "./assets/projectCover/cheffest.png";
-import towerBuddy from "./assets/projectCover/towerbuddy.png";
+
+//import towerBuddy from "./assets/projectCover/towerbuddy.png";
 import i4sight from "./assets/projectCover/i4sight.png";
 import worldFusion from "./assets/projectCover/world_fusion.png";
 import ethioFastFood from "./assets/projectCover/ethio_fast_food.png";
@@ -35,13 +34,13 @@ export const projects = [
     skills: ["html", "javaScript", "react", "redux", "gemini api","tailwind css", "react router", "react leaflet"],
   },
   {
-    name: 'tower buddy',
-    image: towerBuddy,
-    projectLink: 'https://towerbuddy.tel/',
+    name: 'Symergygh LTD',
+    image: i4sight,
+    projectLink: 'http://symergygh.com',
     githubLink: '',
     description:
-      'TowerBuddy provides the landowners a platform to list the available property, increasing the chances of the property being monetized at optimum rate.',
-    skills: ['html', 'css', 'javaScript', 'react', 'email JS'],
+      'Symergy aims to streamline and systemize the waste management and energy problems in Ghana. Recognizing the inefficiencies of current waste collection entities in accurately identifying disposal locations and the lack of standardized pricing.',
+    skills: ['Next js', 'Tailwind css', 'Typescript', 'Google Map', 'Firebase'],
   },
   {
     name: 'Tic Tac Toe',
