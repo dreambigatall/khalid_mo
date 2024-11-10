@@ -1,12 +1,14 @@
-import frontendFusion from "./assets/projectCover/frontend-fusion.png";
-import cheffest from "./assets/projectCover/cheffest.png";
+//import frontendFusion from "./assets/projectCover/frontend-fusion.png";
+//import cheffest from "./assets/projectCover/cheffest.png";
 import towerBuddy from "./assets/projectCover/towerbuddy.png";
 import i4sight from "./assets/projectCover/i4sight.png";
-
+import worldFusion from "./assets/projectCover/world_fusion.png";
+import ethioFastFood from "./assets/projectCover/ethio_fast_food.png";
+import ticTacToe from "./assets/projectCover/tictactoe.png";
 export const projects = [
   {
     name: "EthioFastFood",
-    image: cheffest,
+    image: ethioFastFood,
     projectLink: "https://dreambigatall.github.io/EthioFastFood/",
     githubLink: "https://github.com/dreambigatall/EthioFastFood",
     description:
@@ -25,7 +27,7 @@ export const projects = [
   },
   {
     name: "World Fusion",
-    image: frontendFusion,
+    image: worldFusion,
     projectLink: "https://dreambigatall.github.io/World_Fusion/",
     githubLink: "https://github.com/dreambigatall/World_Fusion",
     description:
@@ -42,12 +44,12 @@ export const projects = [
     skills: ['html', 'css', 'javaScript', 'react', 'email JS'],
   },
   {
-    name: 'i4Sight',
-    image: i4sight,
-    projectLink: 'https://www.i4sight.net/',
-    githubLink: '',
+    name: 'Tic Tac Toe',
+    image: ticTacToe,
+    projectLink: 'https://dreambigatall.github.io/',
+    githubLink: 'https://github.com/dreambigatall/dreambigatall.github.io',
     description:
-      'Designed and developed my first static real-world project from scratch during my internship at the company. One of the first B2B2C platforms of its kind is i4Sight.',
+      'Designed and developed my first interactive real-world project from scratch during my learning phase of js, html,css. My first web based game project.',
     skills: ['html', 'css', 'javaScript'],
   },
 ];
