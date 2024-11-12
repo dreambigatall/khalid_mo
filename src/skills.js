@@ -11,11 +11,16 @@ export const skills = [
         'node JS',
         'mongoDB',
         'express JS',
+        'next JS',
+        'typescript',
+        'git',
+        'supabase',
+        'firebase',
       ],
     },
     skillTwo: {
       field: 'design & editing',
-      tools: ['figma', 'photoshop', 'illustrator', 'premiere pro CC'],
+      tools: ['figma', 'photoshop', ],
     },
   },
 ];

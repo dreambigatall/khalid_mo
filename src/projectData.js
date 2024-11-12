@@ -1,12 +1,13 @@
-import frontendFusion from "./assets/projectCover/frontend-fusion.png";
-import cheffest from "./assets/projectCover/cheffest.png";
-import towerBuddy from "./assets/projectCover/towerbuddy.png";
-import i4sight from "./assets/projectCover/i4sight.png";
 
+//import towerBuddy from "./assets/projectCover/towerbuddy.png";
+import i4sight from "./assets/projectCover/i4sight.png";
+import worldFusion from "./assets/projectCover/world_fusion.png";
+import ethioFastFood from "./assets/projectCover/ethio_fast_food.png";
+import ticTacToe from "./assets/projectCover/tictactoe.png";
 export const projects = [
   {
     name: "EthioFastFood",
-    image: cheffest,
+    image: ethioFastFood,
     projectLink: "https://dreambigatall.github.io/EthioFastFood/",
     githubLink: "https://github.com/dreambigatall/EthioFastFood",
     description:
@@ -25,7 +26,7 @@ export const projects = [
   },
   {
     name: "World Fusion",
-    image: frontendFusion,
+    image: worldFusion,
     projectLink: "https://dreambigatall.github.io/World_Fusion/",
     githubLink: "https://github.com/dreambigatall/World_Fusion",
     description:
@@ -33,21 +34,21 @@ export const projects = [
     skills: ["html", "javaScript", "react", "redux", "gemini api","tailwind css", "react router", "react leaflet"],
   },
   {
-    name: 'tower buddy',
-    image: towerBuddy,
-    projectLink: 'https://towerbuddy.tel/',
+    name: 'Symergygh LTD',
+    image: i4sight,
+    projectLink: 'http://symergygh.com',
     githubLink: '',
     description:
-      'TowerBuddy provides the landowners a platform to list the available property, increasing the chances of the property being monetized at optimum rate.',
-    skills: ['html', 'css', 'javaScript', 'react', 'email JS'],
+      'Symergy aims to streamline and systemize the waste management and energy problems in Ghana. Recognizing the inefficiencies of current waste collection entities in accurately identifying disposal locations and the lack of standardized pricing.',
+    skills: ['Next js', 'Tailwind css', 'Typescript', 'Google Map', 'Firebase'],
   },
   {
-    name: 'i4Sight',
-    image: i4sight,
-    projectLink: 'https://www.i4sight.net/',
-    githubLink: '',
+    name: 'Tic Tac Toe',
+    image: ticTacToe,
+    projectLink: 'https://dreambigatall.github.io/',
+    githubLink: 'https://github.com/dreambigatall/dreambigatall.github.io',
     description:
-      'Designed and developed my first static real-world project from scratch during my internship at the company. One of the first B2B2C platforms of its kind is i4Sight.',
+      'Designed and developed my first interactive real-world project from scratch during my learning phase of js, html,css. My first web based game project.',
     skills: ['html', 'css', 'javaScript'],
   },
 ];

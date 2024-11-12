@@ -5,7 +5,7 @@ export default function Title() {
         Khalid Mohammed
       </h1>
       <h2 className=" font-vietnam text-base capitalize text-text-secondary md:text-xl">
-        frontend developer | Aspiring Software Engineer
+         Software Developer 
       </h2>
     </div>
   );
