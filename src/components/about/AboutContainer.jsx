@@ -45,17 +45,16 @@ export default function AboutContainer() {
        {/* <p className=' text-sm font-vietnam text-text bg-background backdrop-blur-custom  shadow-card p-4 xs:text-base xs:p-6 lg:outline lg:shadow-card lg:outline-[1px] lg:outline-accent lg:absolute lg:max-w-[480px] lg:top-6 lg:right-6 xl:max-w-[660px] xl:top-8 xl:right-8 '>  */}
        <Paragraph >
           I&apos;m an enthusiastic individual based in Addis Ababa with a passion
-          for coding and continuous learning, specializing in frontend
-          development to create intuitive user interfaces and bring designs to
-          life. While I typically handle both FrontEnd and BackEnd aspects in
+          for coding and continuous learning, specializing in full-stack web
+          development to create intuitive user interfaces and efficient backend systems. While I typically handle both FrontEnd and BackEnd aspects in
           my personal and freelance projects, my primary focus remains on
-          FrontEnd development.
+          on BackEnd and Full-Stack development.
           <br />
           <br />
-          Having previously worked as a UI/UX designer for several
-          years, I have transitioned into web development with newfound
+          Having previously worked as a junior full-stack developer for several
+          year, I have transitioned into web development with newfound
           enthusiasm. I am looking forward to work as a web developer and focus
-          on honing my skills in this exciting field and diving into the world
+          on honing my skills in this exciting field and diving into the world of
           of creating awesome web applications.
         </Paragraph>
       </motion.div>
