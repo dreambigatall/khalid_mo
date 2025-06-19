@@ -43,8 +43,7 @@ export default function App() {
       ],
     },
   ],
-  { basename: "/khalid_mo" } // set your base URL here
-
+  
 );
   return (
     <AppContext>
