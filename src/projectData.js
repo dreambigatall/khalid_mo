@@ -53,7 +53,7 @@ export const projects = [
   {
     name: "AI Native Resume Analyzer For Recruiters",
     image: resized_resume_analyzer,
-    projectLink: 'https://ai-resume-analayzer-1.onrender.com/login',
+    projectLink: 'https://ai-resume-analayzer-1.onrender.com/',
     githubLink: 'https://github.com/dreambigatall/AI_Resume_Analayzer',
     description:
       'A full-stack web application that uses AI to analyze resumes and provide insights to recruiters. It uses the Gemini API to analyze the resume and provide insights to the recruiter.',
