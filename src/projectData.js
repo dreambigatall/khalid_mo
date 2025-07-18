@@ -64,7 +64,7 @@ export const projects = [
   {
     name: "Trucker",
     image: 'https://znikiymccixmabrhrcux.supabase.co/storage/v1/object/public/storage//New_Website_Blue_Mockup_Instagram_-_Laptop__1_-removebg-preview%20(1).png',
-    projectLink: "https://dreambigatall.github.io/CapStone_project",
+    projectLink: "https://capstone-project-iurl.onrender.com",
     githubLink: "https://github.com/dreambigatall/CapStone_project",
     description:
       "Trucker is a modern truck logistics platform designed to streamline booking management. Managers gain real-time control over user bookings through a centralized dashboard. Leveraging TanStack Query for robust remote data management and React Hook Form for seamless validation, Trucker ensures a smooth and efficient user experience. The platform is powered by a scalable Supabase backend, providing reliable data storage and API capabilities",
