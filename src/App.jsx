@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import {
   FiArrowDown,
   FiArrowUpRight,
@@ -231,6 +232,188 @@ const agentDrivenWorkflow = [
     copy: "Inspect the diff, challenge shortcuts, simplify the result, and document the decisions that matter.",
   },
 ];
+
+function HeroDotCanvas() {
+  const canvasRef = useRef(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const host = canvas?.parentElement;
+    const context = canvas?.getContext("2d");
+
+    if (!canvas || !host || !context) return undefined;
+
+    const staticMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce), (pointer: coarse)",
+    );
+    const pointer = { x: 0, y: 0, active: false };
+    const follower = { x: 0, y: 0 };
+    let points = [];
+    let width = 0;
+    let height = 0;
+    let frameId = 0;
+
+    const buildPoints = () => {
+      const spacing = width < 780 ? 40 : 48;
+      const offsetX = (width % spacing) / 2;
+      const offsetY = (height % spacing) / 2;
+      const nextPoints = [];
+
+      for (let y = offsetY; y <= height; y += spacing) {
+        for (let x = offsetX; x <= width; x += spacing) {
+          nextPoints.push({ x, y, renderX: x, renderY: y });
+        }
+      }
+
+      points = nextPoints;
+    };
+
+    const draw = () => {
+      context.clearRect(0, 0, width, height);
+
+      const homeX = width * 0.73;
+      const homeY = height * 0.42;
+      const targetX = pointer.active ? pointer.x : homeX;
+      const targetY = pointer.active ? pointer.y : homeY;
+      const influenceRadius = width < 780 ? 92 : 124;
+      const maxShift = width < 780 ? 8 : 13;
+
+      follower.x += (targetX - follower.x) * 0.085;
+      follower.y += (targetY - follower.y) * 0.085;
+
+      points.forEach((point) => {
+        let renderX = point.x;
+        let renderY = point.y;
+
+        if (pointer.active && !staticMotion.matches) {
+          const dx = point.x - pointer.x;
+          const dy = point.y - pointer.y;
+          const distance = Math.hypot(dx, dy);
+
+          if (distance > 0 && distance < influenceRadius) {
+            const force = (1 - distance / influenceRadius) * maxShift;
+            renderX += (dx / distance) * force;
+            renderY += (dy / distance) * force;
+          }
+        }
+
+        point.renderX += (renderX - point.renderX) * 0.16;
+        point.renderY += (renderY - point.renderY) * 0.16;
+      });
+
+      if (pointer.active && !staticMotion.matches) {
+        points.forEach((point) => {
+          const distance = Math.hypot(
+            point.renderX - follower.x,
+            point.renderY - follower.y,
+          );
+
+          if (distance < influenceRadius * 0.72) {
+            const alpha = (1 - distance / (influenceRadius * 0.72)) * 0.24;
+            context.beginPath();
+            context.moveTo(follower.x, follower.y);
+            context.lineTo(point.renderX, point.renderY);
+            context.strokeStyle = `rgba(22, 122, 91, ${alpha})`;
+            context.lineWidth = 1;
+            context.stroke();
+          }
+        });
+      }
+
+      points.forEach((point) => {
+        const distance = Math.hypot(
+          point.renderX - follower.x,
+          point.renderY - follower.y,
+        );
+        const isNear = pointer.active && distance < influenceRadius;
+
+        context.beginPath();
+        context.arc(
+          point.renderX,
+          point.renderY,
+          isNear ? 1.8 : 1.15,
+          0,
+          Math.PI * 2,
+        );
+        context.fillStyle = isNear
+          ? "rgba(22, 122, 91, 0.55)"
+          : "rgba(9, 10, 9, 0.14)";
+        context.fill();
+      });
+
+      context.beginPath();
+      context.arc(
+        follower.x,
+        follower.y,
+        pointer.active ? 4.2 : 3,
+        0,
+        Math.PI * 2,
+      );
+      context.fillStyle = pointer.active
+        ? "#91e8c3"
+        : "rgba(22, 122, 91, 0.45)";
+      context.fill();
+    };
+
+    const animate = () => {
+      draw();
+      frameId = window.requestAnimationFrame(animate);
+    };
+
+    const resize = () => {
+      const bounds = host.getBoundingClientRect();
+      const pixelRatio = Math.min(window.devicePixelRatio || 1, 1.5);
+      width = Math.max(1, Math.round(bounds.width));
+      height = Math.max(1, Math.round(bounds.height));
+      canvas.width = Math.round(width * pixelRatio);
+      canvas.height = Math.round(height * pixelRatio);
+      canvas.style.width = `${width}px`;
+      canvas.style.height = `${height}px`;
+      context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
+      follower.x = width * 0.73;
+      follower.y = height * 0.42;
+      buildPoints();
+      draw();
+    };
+
+    const handlePointerMove = (event) => {
+      const bounds = host.getBoundingClientRect();
+      pointer.x = event.clientX - bounds.left;
+      pointer.y = event.clientY - bounds.top;
+      pointer.active = true;
+    };
+
+    const handlePointerLeave = () => {
+      pointer.active = false;
+    };
+
+    const updateMotionMode = () => {
+      window.cancelAnimationFrame(frameId);
+      if (staticMotion.matches) draw();
+      else animate();
+    };
+
+    const resizeObserver = new ResizeObserver(resize);
+    resizeObserver.observe(host);
+    host.addEventListener("pointermove", handlePointerMove, { passive: true });
+    host.addEventListener("pointerleave", handlePointerLeave);
+    staticMotion.addEventListener("change", updateMotionMode);
+    resize();
+    updateMotionMode();
+
+    return () => {
+      window.cancelAnimationFrame(frameId);
+      resizeObserver.disconnect();
+      host.removeEventListener("pointermove", handlePointerMove);
+      host.removeEventListener("pointerleave", handlePointerLeave);
+      staticMotion.removeEventListener("change", updateMotionMode);
+    };
+  }, []);
+
+  return (
+    <canvas ref={canvasRef} className="hero-dot-canvas" aria-hidden="true" />
+  );
+}
 
 function ProjectVisual({ project }) {
   const visualCopy = {
@@ -496,6 +679,7 @@ function App() {
 
       <main id="top">
         <section className="hero hero-solo section-pad">
+          <HeroDotCanvas />
           <div className="hero-copy">
             <p className="hero-hand-note">
               Hello, I’m Khalid. I build the system behind the screen.
