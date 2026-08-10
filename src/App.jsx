@@ -526,46 +526,72 @@ function App() {
             </div>
           </div>
 
-          <aside className="hero-proof" aria-label="Engineering profile">
-            <div className="hero-proof-topline">
-              <span>
-                <i></i> ENGINEERING PROFILE / 2026
-              </span>
-              <strong>AVAILABLE</strong>
+          <div
+            className="hero-playground"
+            aria-hidden="true"
+            onPointerMove={(event) => {
+              const bounds = event.currentTarget.getBoundingClientRect();
+              const x =
+                ((event.clientX - bounds.left) / bounds.width - 0.5) * 16;
+              const y =
+                ((event.clientY - bounds.top) / bounds.height - 0.5) * 16;
+
+              event.currentTarget.style.setProperty("--play-x", `${x}px`);
+              event.currentTarget.style.setProperty("--play-y", `${y}px`);
+              event.currentTarget.style.setProperty(
+                "--play-x-reverse",
+                `${-x}px`,
+              );
+              event.currentTarget.style.setProperty(
+                "--play-y-reverse",
+                `${-y}px`,
+              );
+            }}
+            onPointerLeave={(event) => {
+              event.currentTarget.style.setProperty("--play-x", "0px");
+              event.currentTarget.style.setProperty("--play-y", "0px");
+              event.currentTarget.style.setProperty("--play-x-reverse", "0px");
+              event.currentTarget.style.setProperty("--play-y-reverse", "0px");
+            }}
+          >
+            <div className="playground-loop loop-one"></div>
+            <div className="playground-loop loop-two"></div>
+
+            <div className="playground-browser">
+              <div className="playground-browser-bar">
+                <i></i>
+                <i></i>
+                <i></i>
+              </div>
+              <div className="playground-browser-body">
+                <span></span>
+                <span></span>
+                <span></span>
+                <strong>HELLO, WORLD.</strong>
+              </div>
             </div>
 
-            <div className="hero-proof-intro">
-              <span>HOW I BUILD</span>
-              <h2>
-                Context in.
-                <br />
-                <em>Production out.</em>
-              </h2>
-              <p>
-                Human-led engineering accelerated by focused agents, clear
-                system boundaries, and proof before release.
-              </p>
+            <div className="playground-note">
+              <span>ONE SMALL IDEA</span>
+              <strong>
+                CAN BECOME
+                <br />A REAL PRODUCT.
+              </strong>
+              <i></i>
             </div>
 
-            <dl className="hero-proof-list">
-              <div>
-                <dt>Agent tools</dt>
-                <dd>Codex · Claude · Cursor</dd>
-              </div>
-              <div>
-                <dt>Product stack</dt>
-                <dd>Next.js · NestJS · PostgreSQL</dd>
-              </div>
-              <div>
-                <dt>Delivery loop</dt>
-                <dd>Build · Test · Review · Ship</dd>
-              </div>
-            </dl>
-
-            <a className="hero-proof-link" href="#agentic">
-              Explore my agent-driven workflow <FiArrowDown />
-            </a>
-          </aside>
+            <div className="playground-orb">
+              <span>KM</span>
+            </div>
+            <div className="playground-code">&lt;/&gt;</div>
+            <div className="playground-launch">
+              READY <span>↗</span>
+            </div>
+            <div className="playground-cursor">↖</div>
+            <div className="playground-spark spark-one">✦</div>
+            <div className="playground-spark spark-two">✦</div>
+            <p className="playground-hint">move the cursor</p>
+          </div>
         </section>
 
         <section
@@ -766,7 +792,7 @@ function App() {
           </div>
         </section>
 
-        <section id="agentic" className="agentic-section section-pad">
+        <section className="agentic-section section-pad">
           <div className="agentic-panel">
             <div className="agentic-copy">
               <div className="section-kicker light">
