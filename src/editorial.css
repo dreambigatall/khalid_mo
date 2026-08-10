@@ -3237,7 +3237,7 @@ body::before {
 .hero-solo h1 {
   max-width: 1020px;
   font-size: clamp(4.7rem, 7.35vw, 8.6rem);
-  margin-bottom: clamp(22px, 3vw, 38px);
+  margin-bottom: clamp(34px, 3.8vw, 50px);
 }
 
 .hero-playground {
