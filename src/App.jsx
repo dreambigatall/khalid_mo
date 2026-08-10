@@ -379,64 +379,134 @@ function App() {
               <span>ENGINEERING RUN / 2026</span>
               <span className="pulse">ACTIVE</span>
             </div>
-            <div className="agent-run-summary">
-              <span>LIVE BUILD SYSTEM</span>
-              <strong>Context in. Verified product out.</strong>
-              <p>
-                Coding agents accelerate the loop. Product judgment, system
-                boundaries, and final approval stay human.
-              </p>
-            </div>
-            <div className="hero-agent-pipeline" aria-hidden="true">
-              <div className="pipeline-path">
+            <div className="agent-workflow-canvas" aria-hidden="true">
+              <div className="workflow-canvas-label">
+                <span>
+                  <i></i> AGENTIC BUILD LOOP
+                </span>
+                <strong>Context → code → proof</strong>
+              </div>
+
+              <div className="workflow-orbit orbit-one"></div>
+              <div className="workflow-orbit orbit-two"></div>
+
+              <div className="agent-engine-core">
+                <div className="engine-topline">
+                  <span>AGENTIC ENGINE</span>
+                  <i></i>
+                </div>
+                <div className="engine-mark">
+                  <span>KM</span>
+                </div>
+                <strong>BUILD / VERIFY</strong>
+                <p>Codex · Claude · Cursor</p>
+                <div className="engine-activity">
+                  <i></i>
+                  <i></i>
+                  <i></i>
+                  <i></i>
+                  <i></i>
+                  <i></i>
+                  <i></i>
+                </div>
+              </div>
+
+              <article className="workflow-float context-panel">
+                <header>
+                  <span>CONTEXT LOADED</span>
+                  <i></i>
+                </header>
+                <strong>Repository + product rules</strong>
+                <div className="context-lines">
+                  <i></i>
+                  <i></i>
+                  <i></i>
+                  <i></i>
+                </div>
+                <small>12 files mapped · constraints found</small>
+              </article>
+
+              <article className="workflow-float plan-panel">
+                <header>
+                  <span>ARCHITECTURE PLAN</span>
+                  <i></i>
+                </header>
+                <div className="plan-nodes">
+                  <span>UI</span>
+                  <i></i>
+                  <span>API</span>
+                  <i></i>
+                  <span>DB</span>
+                </div>
+                <small>Boundaries confirmed</small>
+              </article>
+
+              <article className="workflow-float build-panel">
+                <header>
+                  <span>IMPLEMENTING</span>
+                  <i></i>
+                </header>
+                <div className="build-agent-row">
+                  <span>CX</span>
+                  <div>
+                    <strong>Codex</strong>
+                    <small>product slice</small>
+                  </div>
+                </div>
+                <div className="build-progress">
+                  <i></i>
+                </div>
+                <small>Changes scoped · 78%</small>
+              </article>
+
+              <article className="workflow-float tests-panel">
+                <header>
+                  <span>RUNNING CHECKS</span>
+                  <i></i>
+                </header>
+                <div className="test-result">
+                  <span>BUILD</span>
+                  <strong>PASS</strong>
+                </div>
+                <div className="test-result">
+                  <span>TESTS</span>
+                  <strong>14 / 14</strong>
+                </div>
+                <div className="test-result">
+                  <span>LINT</span>
+                  <strong>CLEAN</strong>
+                </div>
+              </article>
+
+              <article className="workflow-float review-panel">
+                <header>
+                  <span>CRITICAL REVIEW</span>
+                  <i></i>
+                </header>
+                <div className="review-note">
+                  <span>CL</span>
+                  <p>
+                    <strong>Claude</strong>
+                    <small>Architecture holds. One edge case flagged.</small>
+                  </p>
+                </div>
+                <small>Human decision required</small>
+              </article>
+
+              <article className="workflow-float approval-panel">
+                <span className="approval-avatar">KM</span>
+                <p>
+                  <strong>HUMAN APPROVAL</strong>
+                  <small>Release decision stays human</small>
+                </p>
+                <i>
+                  <FiCheck />
+                </i>
+              </article>
+
+              <div className="workflow-release-chip">
                 <i></i>
-              </div>
-              <div className="pipeline-stage is-complete">
-                <span>01</span>
-                <strong>Context</strong>
-                <small>rules + code</small>
-              </div>
-              <div className="pipeline-stage pipeline-agents is-active">
-                <span>02</span>
-                <strong>Agents</strong>
-                <small>Codex · Claude · Cursor</small>
-              </div>
-              <div className="pipeline-stage is-complete">
-                <span>03</span>
-                <strong>Build</strong>
-                <small>product slice</small>
-              </div>
-              <div className="pipeline-stage is-active">
-                <span>04</span>
-                <strong>Verify</strong>
-                <small>tests + review</small>
-              </div>
-              <div className="pipeline-stage">
-                <span>05</span>
-                <strong>Ship</strong>
-                <small>human approved</small>
-              </div>
-            </div>
-            <div className="hero-run-status">
-              <div>
-                <span>BUILD</span>
-                <strong>PASSING</strong>
-                <i></i>
-              </div>
-              <div>
-                <span>TESTS</span>
-                <strong>RUNNING</strong>
-                <i></i>
-              </div>
-              <div>
-                <span>REVIEW</span>
-                <strong>HUMAN</strong>
-                <i></i>
-              </div>
-              <div>
-                <span>DEPLOY</span>
-                <strong>READY</strong>
-                <i></i>
+                <span>READY TO SHIP</span>
               </div>
             </div>
           </div>
