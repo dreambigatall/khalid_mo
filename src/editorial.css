@@ -3213,3 +3213,7 @@ body::before {
     background: rgba(250, 248, 241, 0.98);
   }
 }
+
+.agent-engine-showcase[hidden] {
+  display: none !important;
+}

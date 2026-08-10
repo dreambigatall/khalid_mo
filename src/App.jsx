@@ -314,6 +314,7 @@ function AgentEngineShowcase() {
   return (
     <section
       className="agent-engine-showcase"
+      hidden
       aria-label="Agent-driven engineering workflow"
     >
       <div className="showcase-caption section-pad">
