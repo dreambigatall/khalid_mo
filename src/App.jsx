@@ -955,7 +955,7 @@ function App() {
           <div className="section-heading">
             <div>
               <div className="section-kicker">
-                <span>05</span> Capabilities
+                <span>04</span> Capabilities
               </div>
               <h2>One engineer across the product stack.</h2>
             </div>
@@ -979,7 +979,7 @@ function App() {
         <section className="about-section section-pad" id="about">
           <div className="about-main">
             <div className="section-kicker">
-              <span>06</span> About
+              <span>05</span> About
             </div>
             <h2>I care about systems that hold up after the demo.</h2>
           </div>
