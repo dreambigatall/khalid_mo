@@ -501,7 +501,7 @@ function App() {
               Hello, I’m Khalid. I build the system behind the screen.
             </p>
             <p className="availability">
-              <span></span> Addis Ababa · Available for remote opportunities
+              <span></span> Addis Ababa · Open for jobs
             </p>
             <h1>
               Full-stack engineer.
@@ -827,10 +827,10 @@ function App() {
                 <h3>Human judgment. AI acceleration.</h3>
               </div>
               <p>
-                I use coding agents as an engineering systemâ€”not an
-                autocomplete shortcut. I give them clear context, bounded tasks,
-                and verification loops while I own architecture, product
-                decisions, and final quality.
+                I use coding agents as an engineering system—not an autocomplete
+                shortcut. I give them clear context, bounded tasks, and
+                verification loops while I own architecture, product decisions,
+                and final quality.
               </p>
             </div>
 
