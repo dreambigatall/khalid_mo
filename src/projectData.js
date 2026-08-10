@@ -5,8 +5,6 @@ import worldFusion from "./assets/projectCover/world_fusion.png";
 import ethioFastFood from "./assets/projectCover/ethio_fast_food.png";
 import ticTacToe from "./assets/projectCover/tictactoe.png";
 import fooddelivery from "./assets/projectCover/fooddelivery.png";
-import aiResumeAnalyz from "./assets/projectCover/aiResumeAnalyz.png";
-import reAiana from "./assets/projectCover/reAiana.png";
 import resized_resume_analyzer from "./assets/projectCover/resized_resume_analyzer.png";
 export const projects = [
   {
