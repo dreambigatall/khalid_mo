@@ -2999,3 +2999,217 @@ body::before {
     width: calc(100% - 16px);
   }
 }
+
+/* Borderless product scene: visually distinct from sticky project cards. */
+.agent-engine-showcase {
+  position: relative;
+  padding: 76px 0 140px;
+  overflow: hidden;
+  background-color: var(--paper-bright);
+  background-image: radial-gradient(
+      circle,
+      rgba(9, 10, 9, 0.13) 1px,
+      transparent 1.2px
+    ),
+    linear-gradient(rgba(9, 10, 9, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(9, 10, 9, 0.035) 1px, transparent 1px);
+  background-position:
+    0 0,
+    0 0,
+    0 0;
+  background-size:
+    20px 20px,
+    96px 96px,
+    96px 96px;
+  box-shadow: 0 0 0 100vmax var(--paper-bright);
+  clip-path: inset(0 -100vmax);
+}
+
+.agent-engine-showcase::before,
+.agent-engine-showcase::after {
+  position: absolute;
+  z-index: 0;
+  border: 1px solid rgba(9, 10, 9, 0.1);
+  border-radius: 50%;
+  content: "";
+}
+
+.agent-engine-showcase::before {
+  top: 22%;
+  left: 50%;
+  width: min(880px, 72vw);
+  height: min(880px, 72vw);
+  transform: translateX(-50%);
+}
+
+.agent-engine-showcase::after {
+  top: 31%;
+  left: 50%;
+  width: min(620px, 52vw);
+  height: min(620px, 52vw);
+  transform: translateX(-50%);
+}
+
+.showcase-caption {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding-block: 0 34px;
+}
+
+.showcase-caption span {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-family: var(--hand);
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.showcase-caption span i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--mint-deep);
+  box-shadow: 0 0 0 5px rgba(30, 118, 86, 0.11);
+}
+
+.showcase-caption p {
+  max-width: 500px;
+  margin: 0;
+  color: var(--paper-muted);
+  font-family: var(--hand);
+  font-size: 8px;
+  line-height: 1.6;
+  text-align: right;
+}
+
+.engine-system-wide {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  min-height: 880px;
+  margin: 0;
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  transform: none;
+}
+
+.engine-system-wide::before,
+.engine-system-wide::after {
+  display: none;
+}
+
+.engine-system-wide .agent-workflow-canvas {
+  width: min(1700px, 100%);
+  min-height: 880px;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.engine-system-wide .workflow-canvas-label {
+  top: 18px;
+  left: 3%;
+}
+
+.engine-system-wide .workflow-orbit {
+  border-color: rgba(9, 10, 9, 0.09);
+}
+
+.engine-system-wide .workflow-float {
+  border: 1px solid var(--ink);
+  border-radius: 0;
+  background: rgba(250, 248, 241, 0.94);
+  box-shadow: none;
+}
+
+.engine-system-wide .workflow-float::before,
+.engine-system-wide .workflow-float::after {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: var(--ink);
+  content: "";
+}
+
+.engine-system-wide .workflow-float::before {
+  top: -3px;
+  left: -3px;
+}
+
+.engine-system-wide .workflow-float::after {
+  right: -3px;
+  bottom: -3px;
+}
+
+.engine-system-wide .context-panel {
+  left: 2%;
+}
+
+.engine-system-wide .plan-panel {
+  right: 5%;
+}
+
+.engine-system-wide .review-panel {
+  left: -10px;
+}
+
+.engine-system-wide .build-panel {
+  right: -10px;
+}
+
+.engine-system-wide .tests-panel {
+  left: 2.5%;
+}
+
+.engine-system-wide .approval-panel {
+  right: 2.5%;
+  border-radius: 999px;
+}
+
+@media (max-width: 780px) {
+  .agent-engine-showcase {
+    padding: 58px 0 88px;
+    background-size:
+      18px 18px,
+      72px 72px,
+      72px 72px;
+  }
+
+  .agent-engine-showcase::before,
+  .agent-engine-showcase::after {
+    display: none;
+  }
+
+  .showcase-caption {
+    display: grid;
+    gap: 12px;
+    padding-bottom: 28px;
+  }
+
+  .showcase-caption p {
+    text-align: left;
+  }
+
+  .engine-system-wide {
+    width: 100%;
+    min-height: 0;
+  }
+
+  .engine-system-wide .agent-workflow-canvas {
+    min-height: 0;
+    padding-inline: 12px;
+    overflow: hidden;
+  }
+
+  .engine-system-wide .workflow-float {
+    background: rgba(250, 248, 241, 0.98);
+  }
+}

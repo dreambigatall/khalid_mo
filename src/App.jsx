@@ -316,14 +316,12 @@ function AgentEngineShowcase() {
       className="agent-engine-showcase"
       aria-label="Agent-driven engineering workflow"
     >
-      <div className="showcase-intro section-pad">
-        <div>
-          <span>LIVE SYSTEM / AGENT-DRIVEN DELIVERY</span>
-          <h2>A build loop designed for production.</h2>
-        </div>
+      <div className="showcase-caption section-pad">
+        <span>
+          <i></i> AGENTS AT WORK / LIVE ENGINEERING SYSTEM
+        </span>
         <p>
-          Context, implementation, verification, and human approval working as
-          one visible engineering system.
+          One bounded workflow from repository context to release confidence.
         </p>
       </div>
 
@@ -331,10 +329,6 @@ function AgentEngineShowcase() {
         className="hero-system engine-system-wide"
         aria-label="Khalid's agent-driven engineering capability map"
       >
-        <div className="system-topline">
-          <span>ENGINEERING RUN / 2026</span>
-          <span className="pulse">ACTIVE</span>
-        </div>
         <div className="agent-workflow-canvas" aria-hidden="true">
           <div className="workflow-canvas-label">
             <span>
