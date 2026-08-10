@@ -525,6 +525,47 @@ function App() {
               </a>
             </div>
           </div>
+
+          <aside className="hero-proof" aria-label="Engineering profile">
+            <div className="hero-proof-topline">
+              <span>
+                <i></i> ENGINEERING PROFILE / 2026
+              </span>
+              <strong>AVAILABLE</strong>
+            </div>
+
+            <div className="hero-proof-intro">
+              <span>HOW I BUILD</span>
+              <h2>
+                Context in.
+                <br />
+                <em>Production out.</em>
+              </h2>
+              <p>
+                Human-led engineering accelerated by focused agents, clear
+                system boundaries, and proof before release.
+              </p>
+            </div>
+
+            <dl className="hero-proof-list">
+              <div>
+                <dt>Agent tools</dt>
+                <dd>Codex · Claude · Cursor</dd>
+              </div>
+              <div>
+                <dt>Product stack</dt>
+                <dd>Next.js · NestJS · PostgreSQL</dd>
+              </div>
+              <div>
+                <dt>Delivery loop</dt>
+                <dd>Build · Test · Review · Ship</dd>
+              </div>
+            </dl>
+
+            <a className="hero-proof-link" href="#agentic">
+              Explore my agent-driven workflow <FiArrowDown />
+            </a>
+          </aside>
         </section>
 
         <section
@@ -725,7 +766,7 @@ function App() {
           </div>
         </section>
 
-        <section className="agentic-section section-pad">
+        <section id="agentic" className="agentic-section section-pad">
           <div className="agentic-panel">
             <div className="agentic-copy">
               <div className="section-kicker light">
