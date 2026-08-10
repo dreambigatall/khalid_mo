@@ -2706,3 +2706,296 @@ body::before {
     animation: none;
   }
 }
+
+/* Full-width agentic showcase, separated from the text-first hero. */
+.hero-solo {
+  grid-template-columns: minmax(0, 1fr);
+  align-items: end;
+  min-height: min(940px, 94vh);
+  padding-bottom: 110px;
+}
+
+.hero-solo .hero-copy {
+  max-width: 1320px;
+}
+
+.hero-solo h1 {
+  max-width: 1280px;
+  font-size: clamp(5rem, 8.8vw, 10rem);
+}
+
+.hero-solo .hero-lede {
+  max-width: 760px;
+}
+
+.agent-engine-showcase {
+  padding: 110px 0 155px;
+  overflow: hidden;
+}
+
+.showcase-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 480px);
+  gap: 60px;
+  align-items: end;
+  padding-block: 0 56px;
+}
+
+.showcase-intro > div > span {
+  display: block;
+  margin-bottom: 18px;
+  font-family: var(--hand);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.showcase-intro h2 {
+  max-width: 940px;
+  margin: 0;
+  font-family: var(--display);
+  font-size: clamp(3.5rem, 6.4vw, 7.4rem);
+  line-height: 0.86;
+  letter-spacing: -0.07em;
+  text-transform: uppercase;
+}
+
+.showcase-intro > p {
+  margin: 0;
+  color: var(--paper-muted);
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.engine-system-wide {
+  width: min(1500px, calc(100% - 36px));
+  min-height: 860px;
+  margin: 0 auto;
+  border-radius: 58px 46px 68px 50px / 50px 66px 44px 60px;
+  box-shadow: 15px 17px 0 var(--ink);
+  transform: none;
+}
+
+.engine-system-wide .agent-workflow-canvas {
+  min-height: 808px;
+}
+
+.engine-system-wide .workflow-canvas-label {
+  top: 38px;
+  left: 44px;
+  gap: 8px;
+}
+
+.engine-system-wide .workflow-canvas-label span {
+  font-size: 8px;
+}
+
+.engine-system-wide .workflow-canvas-label strong {
+  font-size: 18px;
+}
+
+.engine-system-wide .orbit-one {
+  width: 620px;
+  height: 620px;
+}
+
+.engine-system-wide .orbit-two {
+  width: min(900px, 74vw);
+  height: min(760px, 62vw);
+}
+
+.engine-system-wide .agent-engine-core {
+  width: clamp(270px, 24vw, 340px);
+  height: clamp(410px, 35vw, 480px);
+  border-radius: 38px 28px 44px 32px / 30px 42px 28px 39px;
+  box-shadow: 13px 15px 0 var(--mint);
+}
+
+.engine-system-wide .engine-mark {
+  width: 104px;
+  height: 78px;
+  margin-bottom: 34px;
+  border-radius: 19px;
+}
+
+.engine-system-wide .engine-mark span {
+  font-size: 21px;
+}
+
+.engine-system-wide .agent-engine-core > strong {
+  font-size: clamp(1.2rem, 1.7vw, 1.65rem);
+}
+
+.engine-system-wide .agent-engine-core > p {
+  font-size: 8px;
+}
+
+.engine-system-wide .workflow-float {
+  width: clamp(220px, 20vw, 290px);
+  padding: 20px;
+  box-shadow: 6px 7px 0 rgba(9, 10, 9, 0.13);
+}
+
+.engine-system-wide .workflow-float header {
+  font-size: 8px;
+}
+
+.engine-system-wide .workflow-float > strong,
+.engine-system-wide .build-agent-row strong,
+.engine-system-wide .review-note strong {
+  font-size: 14px;
+}
+
+.engine-system-wide .workflow-float > small,
+.engine-system-wide .build-agent-row small,
+.engine-system-wide .review-note small {
+  font-size: 7px;
+}
+
+.engine-system-wide .context-panel {
+  top: 115px;
+  left: 6%;
+}
+
+.engine-system-wide .plan-panel {
+  top: 90px;
+  right: 7%;
+  width: clamp(220px, 19vw, 275px);
+}
+
+.engine-system-wide .build-panel {
+  top: 340px;
+  right: 3.5%;
+  width: clamp(230px, 20vw, 290px);
+}
+
+.engine-system-wide .review-panel {
+  top: 360px;
+  left: 3.5%;
+  width: clamp(230px, 20vw, 290px);
+}
+
+.engine-system-wide .tests-panel {
+  bottom: 88px;
+  left: 5%;
+  width: clamp(220px, 19vw, 275px);
+}
+
+.engine-system-wide .approval-panel {
+  right: 6%;
+  bottom: 84px;
+  width: clamp(250px, 22vw, 310px);
+}
+
+.engine-system-wide .workflow-release-chip {
+  bottom: 28px;
+  padding: 11px 18px;
+  font-size: 8px;
+}
+
+.engine-system-wide .plan-nodes span {
+  width: 36px;
+  height: 36px;
+  font-size: 7px;
+}
+
+.engine-system-wide .build-agent-row > span,
+.engine-system-wide .review-note > span {
+  width: 42px;
+  height: 42px;
+  font-size: 8px;
+}
+
+.engine-system-wide .test-result {
+  padding-block: 10px;
+  font-size: 8px;
+}
+
+@media (max-width: 1040px) {
+  .hero-solo {
+    min-height: auto;
+    padding-top: 160px;
+    padding-bottom: 100px;
+  }
+
+  .showcase-intro {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .showcase-intro > p {
+    max-width: 620px;
+  }
+
+  .engine-system-wide .context-panel,
+  .engine-system-wide .tests-panel {
+    left: 3%;
+  }
+
+  .engine-system-wide .plan-panel,
+  .engine-system-wide .approval-panel {
+    right: 3%;
+  }
+
+  .engine-system-wide .review-panel {
+    left: 1.5%;
+  }
+
+  .engine-system-wide .build-panel {
+    right: 1.5%;
+  }
+}
+
+@media (max-width: 780px) {
+  .hero-solo {
+    padding-top: 124px;
+    padding-bottom: 78px;
+  }
+
+  .hero-solo h1 {
+    font-size: clamp(3.2rem, 15vw, 5.4rem);
+  }
+
+  .agent-engine-showcase {
+    padding: 80px 0 105px;
+  }
+
+  .showcase-intro {
+    padding-bottom: 38px;
+  }
+
+  .showcase-intro h2 {
+    font-size: clamp(3rem, 14vw, 5.2rem);
+  }
+
+  .engine-system-wide {
+    width: calc(100% - 24px);
+    min-height: 0;
+    border-radius: 36px 28px 42px 31px / 30px 40px 27px 36px;
+    box-shadow: 8px 9px 0 var(--ink);
+  }
+
+  .engine-system-wide .agent-workflow-canvas {
+    min-height: 0;
+  }
+
+  .engine-system-wide .agent-engine-core,
+  .engine-system-wide .workflow-float,
+  .engine-system-wide .approval-panel {
+    width: auto;
+  }
+
+  .engine-system-wide .agent-engine-core {
+    height: 270px;
+  }
+}
+
+@media (max-width: 520px) {
+  .showcase-intro > div > span {
+    font-size: 8px;
+  }
+
+  .engine-system-wide {
+    width: calc(100% - 16px);
+  }
+}

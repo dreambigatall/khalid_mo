@@ -310,6 +310,166 @@ function ProjectVisual({ project }) {
   );
 }
 
+function AgentEngineShowcase() {
+  return (
+    <section
+      className="agent-engine-showcase"
+      aria-label="Agent-driven engineering workflow"
+    >
+      <div className="showcase-intro section-pad">
+        <div>
+          <span>LIVE SYSTEM / AGENT-DRIVEN DELIVERY</span>
+          <h2>A build loop designed for production.</h2>
+        </div>
+        <p>
+          Context, implementation, verification, and human approval working as
+          one visible engineering system.
+        </p>
+      </div>
+
+      <div
+        className="hero-system engine-system-wide"
+        aria-label="Khalid's agent-driven engineering capability map"
+      >
+        <div className="system-topline">
+          <span>ENGINEERING RUN / 2026</span>
+          <span className="pulse">ACTIVE</span>
+        </div>
+        <div className="agent-workflow-canvas" aria-hidden="true">
+          <div className="workflow-canvas-label">
+            <span>
+              <i></i> AGENTIC BUILD LOOP
+            </span>
+            <strong>Context → code → proof</strong>
+          </div>
+
+          <div className="workflow-orbit orbit-one"></div>
+          <div className="workflow-orbit orbit-two"></div>
+
+          <div className="agent-engine-core">
+            <div className="engine-topline">
+              <span>AGENTIC ENGINE</span>
+              <i></i>
+            </div>
+            <div className="engine-mark">
+              <span>KM</span>
+            </div>
+            <strong>BUILD / VERIFY</strong>
+            <p>Codex · Claude · Cursor</p>
+            <div className="engine-activity">
+              <i></i>
+              <i></i>
+              <i></i>
+              <i></i>
+              <i></i>
+              <i></i>
+              <i></i>
+            </div>
+          </div>
+
+          <article className="workflow-float context-panel">
+            <header>
+              <span>CONTEXT LOADED</span>
+              <i></i>
+            </header>
+            <strong>Repository + product rules</strong>
+            <div className="context-lines">
+              <i></i>
+              <i></i>
+              <i></i>
+              <i></i>
+            </div>
+            <small>12 files mapped · constraints found</small>
+          </article>
+
+          <article className="workflow-float plan-panel">
+            <header>
+              <span>ARCHITECTURE PLAN</span>
+              <i></i>
+            </header>
+            <div className="plan-nodes">
+              <span>UI</span>
+              <i></i>
+              <span>API</span>
+              <i></i>
+              <span>DB</span>
+            </div>
+            <small>Boundaries confirmed</small>
+          </article>
+
+          <article className="workflow-float build-panel">
+            <header>
+              <span>IMPLEMENTING</span>
+              <i></i>
+            </header>
+            <div className="build-agent-row">
+              <span>CX</span>
+              <div>
+                <strong>Codex</strong>
+                <small>product slice</small>
+              </div>
+            </div>
+            <div className="build-progress">
+              <i></i>
+            </div>
+            <small>Changes scoped · 78%</small>
+          </article>
+
+          <article className="workflow-float tests-panel">
+            <header>
+              <span>RUNNING CHECKS</span>
+              <i></i>
+            </header>
+            <div className="test-result">
+              <span>BUILD</span>
+              <strong>PASS</strong>
+            </div>
+            <div className="test-result">
+              <span>TESTS</span>
+              <strong>14 / 14</strong>
+            </div>
+            <div className="test-result">
+              <span>LINT</span>
+              <strong>CLEAN</strong>
+            </div>
+          </article>
+
+          <article className="workflow-float review-panel">
+            <header>
+              <span>CRITICAL REVIEW</span>
+              <i></i>
+            </header>
+            <div className="review-note">
+              <span>CL</span>
+              <p>
+                <strong>Claude</strong>
+                <small>Architecture holds. One edge case flagged.</small>
+              </p>
+            </div>
+            <small>Human decision required</small>
+          </article>
+
+          <article className="workflow-float approval-panel">
+            <span className="approval-avatar">KM</span>
+            <p>
+              <strong>HUMAN APPROVAL</strong>
+              <small>Release decision stays human</small>
+            </p>
+            <i>
+              <FiCheck />
+            </i>
+          </article>
+
+          <div className="workflow-release-chip">
+            <i></i>
+            <span>READY TO SHIP</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function App() {
   const year = new Date().getFullYear();
 
@@ -340,7 +500,7 @@ function App() {
       </header>
 
       <main id="top">
-        <section className="hero section-pad">
+        <section className="hero hero-solo section-pad">
           <div className="hero-copy">
             <p className="hero-hand-note">
               Hello, I’m Khalid. I build the system behind the screen.
@@ -370,146 +530,6 @@ function App() {
               </a>
             </div>
           </div>
-
-          <div
-            className="hero-system"
-            aria-label="Khalid's engineering capability map"
-          >
-            <div className="system-topline">
-              <span>ENGINEERING RUN / 2026</span>
-              <span className="pulse">ACTIVE</span>
-            </div>
-            <div className="agent-workflow-canvas" aria-hidden="true">
-              <div className="workflow-canvas-label">
-                <span>
-                  <i></i> AGENTIC BUILD LOOP
-                </span>
-                <strong>Context → code → proof</strong>
-              </div>
-
-              <div className="workflow-orbit orbit-one"></div>
-              <div className="workflow-orbit orbit-two"></div>
-
-              <div className="agent-engine-core">
-                <div className="engine-topline">
-                  <span>AGENTIC ENGINE</span>
-                  <i></i>
-                </div>
-                <div className="engine-mark">
-                  <span>KM</span>
-                </div>
-                <strong>BUILD / VERIFY</strong>
-                <p>Codex · Claude · Cursor</p>
-                <div className="engine-activity">
-                  <i></i>
-                  <i></i>
-                  <i></i>
-                  <i></i>
-                  <i></i>
-                  <i></i>
-                  <i></i>
-                </div>
-              </div>
-
-              <article className="workflow-float context-panel">
-                <header>
-                  <span>CONTEXT LOADED</span>
-                  <i></i>
-                </header>
-                <strong>Repository + product rules</strong>
-                <div className="context-lines">
-                  <i></i>
-                  <i></i>
-                  <i></i>
-                  <i></i>
-                </div>
-                <small>12 files mapped · constraints found</small>
-              </article>
-
-              <article className="workflow-float plan-panel">
-                <header>
-                  <span>ARCHITECTURE PLAN</span>
-                  <i></i>
-                </header>
-                <div className="plan-nodes">
-                  <span>UI</span>
-                  <i></i>
-                  <span>API</span>
-                  <i></i>
-                  <span>DB</span>
-                </div>
-                <small>Boundaries confirmed</small>
-              </article>
-
-              <article className="workflow-float build-panel">
-                <header>
-                  <span>IMPLEMENTING</span>
-                  <i></i>
-                </header>
-                <div className="build-agent-row">
-                  <span>CX</span>
-                  <div>
-                    <strong>Codex</strong>
-                    <small>product slice</small>
-                  </div>
-                </div>
-                <div className="build-progress">
-                  <i></i>
-                </div>
-                <small>Changes scoped · 78%</small>
-              </article>
-
-              <article className="workflow-float tests-panel">
-                <header>
-                  <span>RUNNING CHECKS</span>
-                  <i></i>
-                </header>
-                <div className="test-result">
-                  <span>BUILD</span>
-                  <strong>PASS</strong>
-                </div>
-                <div className="test-result">
-                  <span>TESTS</span>
-                  <strong>14 / 14</strong>
-                </div>
-                <div className="test-result">
-                  <span>LINT</span>
-                  <strong>CLEAN</strong>
-                </div>
-              </article>
-
-              <article className="workflow-float review-panel">
-                <header>
-                  <span>CRITICAL REVIEW</span>
-                  <i></i>
-                </header>
-                <div className="review-note">
-                  <span>CL</span>
-                  <p>
-                    <strong>Claude</strong>
-                    <small>Architecture holds. One edge case flagged.</small>
-                  </p>
-                </div>
-                <small>Human decision required</small>
-              </article>
-
-              <article className="workflow-float approval-panel">
-                <span className="approval-avatar">KM</span>
-                <p>
-                  <strong>HUMAN APPROVAL</strong>
-                  <small>Release decision stays human</small>
-                </p>
-                <i>
-                  <FiCheck />
-                </i>
-              </article>
-
-              <div className="workflow-release-chip">
-                <i></i>
-                <span>READY TO SHIP</span>
-              </div>
-            </div>
-          </div>
         </section>
 
         <section
@@ -536,6 +556,8 @@ function App() {
             </div>
           </div>
         </section>
+
+        <AgentEngineShowcase />
 
         <section className="intro section-pad">
           <div className="section-kicker">
