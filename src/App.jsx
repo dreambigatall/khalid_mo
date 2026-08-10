@@ -169,6 +169,29 @@ const agenticPrinciples = [
   "Measure quality, latency, cost, and failure modes.",
 ];
 
+const agentDrivenWorkflow = [
+  {
+    title: "Frame",
+    copy: "Define the outcome, constraints, risks, and acceptance criteria before asking an agent to build.",
+  },
+  {
+    title: "Context",
+    copy: "Map the relevant code, product rules, APIs, and existing patterns so the work stays grounded.",
+  },
+  {
+    title: "Build",
+    copy: "Use focused agent loops to implement, refactor, and connect complete product slices.",
+  },
+  {
+    title: "Verify",
+    copy: "Run tests, lint, builds, and runtime checks instead of treating generated code as finished code.",
+  },
+  {
+    title: "Review",
+    copy: "Inspect the diff, challenge shortcuts, simplify the result, and document the decisions that matter.",
+  },
+];
+
 function ProjectVisual({ project }) {
   if (project.image) {
     return (
@@ -467,6 +490,65 @@ function App() {
                   <p>{principle}</p>
                   <FiCheck />
                 </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="agent-dev-feature">
+            <div className="agent-dev-header">
+              <div>
+                <p>Agent-driven development</p>
+                <h3>Human judgment. AI acceleration.</h3>
+              </div>
+              <p>
+                I use coding agents as an engineering systemâ€”not an
+                autocomplete shortcut. I give them clear context, bounded tasks,
+                and verification loops while I own architecture, product
+                decisions, and final quality.
+              </p>
+            </div>
+
+            <div
+              className="agent-tool-row"
+              aria-label="Agent-driven development tools"
+            >
+              <article>
+                <span className="agent-tool-status">Primary agent</span>
+                <strong>Codex</strong>
+                <p>
+                  Repository-scale implementation, debugging, testing, and
+                  delivery.
+                </p>
+              </article>
+              <article>
+                <span className="agent-tool-status">Thinking partner</span>
+                <strong>Claude</strong>
+                <p>
+                  Architecture exploration, deep analysis, and critical code
+                  review.
+                </p>
+              </article>
+              <article>
+                <span className="agent-tool-status">Editor workflow</span>
+                <strong>Cursor</strong>
+                <p>
+                  Fast in-editor iteration, navigation, refactoring, and
+                  codebase context.
+                </p>
+              </article>
+            </div>
+
+            <div
+              className="agent-workflow"
+              aria-label="Agent-driven development workflow"
+            >
+              {agentDrivenWorkflow.map((step, index) => (
+                <article key={step.title}>
+                  <span>0{index + 1}</span>
+                  <i aria-hidden="true"></i>
+                  <h4>{step.title}</h4>
+                  <p>{step.copy}</p>
+                </article>
               ))}
             </div>
           </div>
