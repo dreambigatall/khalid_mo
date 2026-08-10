@@ -16,9 +16,6 @@ import {
   FiZap,
 } from "react-icons/fi";
 
-import aiResumeAnalyzer from "./assets/projectCover/resized_resume_analyzer.png";
-import symergyPreview from "./assets/projectCover/i4sight.png";
-
 const resumePath = "/resume/khalid-mohammed-full-stack-engineer.pdf";
 
 const proofPoints = [
@@ -39,9 +36,17 @@ const projects = [
       "Delivered full-stack features across Next.js and NestJS, designed and consumed service APIs, shaped database logic, and applied Redis caching to frequently accessed endpoints.",
     outcome:
       "Production SaaS work across complex business domains and cross-service data flows.",
+    challenge:
+      "The platform had to grow across HR, planning, payroll, feedback, and CRM without turning every new module into a maintenance risk.",
     metric: { value: "PROD", label: "multi-module SaaS" },
+    metrics: [
+      { value: "PROD", label: "deployed SaaS" },
+      { value: "MULTI", label: "business modules" },
+      { value: "CACHE", label: "Redis strategy" },
+    ],
     stack: ["Next.js", "NestJS", "TypeScript", "PostgreSQL", "Redis", "Docker"],
     visual: "system",
+    live: "https://selamnew.com/",
     privateWork: true,
   },
   {
@@ -54,9 +59,17 @@ const projects = [
       "Built frontend and backend modules, handled tenant-aware domain logic, improved reusable service boundaries, and supported efficient onboarding for new organizations.",
     outcome:
       "A maintainable multi-tenant foundation for client-facing CRM workflows.",
+    challenge:
+      "Every client needed the same CRM capabilities while its data, permissions, and business rules remained isolated per organization.",
     metric: { value: "MULTI", label: "tenant architecture" },
+    metrics: [
+      { value: "MULTI", label: "tenant ready" },
+      { value: "SAFE", label: "data isolation" },
+      { value: "API", label: "reusable services" },
+    ],
     stack: ["NestJS", "Next.js", "PostgreSQL", "Redis", "Microservices"],
     visual: "tenant",
+    live: "https://selamnew.com/",
     privateWork: true,
   },
   {
@@ -68,9 +81,17 @@ const projects = [
     contribution:
       "Owned requirements, authentication, interface development, API integration, deployment, testing, and client handoff.",
     outcome: "More than 1,000 active users across deployed mini apps.",
+    challenge:
+      "Embedded products had to handle Telegram authentication, constrained mobile interfaces, and real-user reliability from day one.",
     metric: { value: "1K+", label: "active users" },
+    metrics: [
+      { value: "1K+", label: "active users" },
+      { value: "E2E", label: "product ownership" },
+      { value: "LIVE", label: "deployed apps" },
+    ],
     stack: ["React", "Node.js", "TypeScript", "Telegram Bot API"],
     visual: "telegram",
+    live: "https://t.me/HM_Empire_official",
   },
   {
     number: "04",
@@ -82,9 +103,16 @@ const projects = [
       "Built the product flow, authentication, data layer, API integration, validation, and recruiter-facing interface.",
     outcome:
       "A working AI product that connects document analysis with a practical hiring workflow.",
+    challenge:
+      "Recruiters needed useful structured insight from uploaded résumés, not another generic AI chat experience.",
     metric: { value: "AI", label: "recruiter workflow" },
+    metrics: [
+      { value: "AI", label: "Gemini analysis" },
+      { value: "E2E", label: "full-stack flow" },
+      { value: "LIVE", label: "working product" },
+    ],
     stack: ["React", "Node.js", "MongoDB", "Supabase", "Gemini API"],
-    image: aiResumeAnalyzer,
+    visual: "ai",
     live: "https://ai-resume-analayzer-1.onrender.com/",
     repo: "https://github.com/dreambigatall/AI_Resume_Analayzer",
   },
@@ -97,9 +125,16 @@ const projects = [
     contribution:
       "Translated Figma designs into production interfaces, integrated backend APIs, and removed rendering and data-flow bottlenecks.",
     outcome: "Improved interface rendering and system efficiency by 60%.",
+    challenge:
+      "The product had to match production designs, connect reliably to backend APIs, and remove visible rendering bottlenecks.",
     metric: { value: "60%", label: "efficiency gain" },
+    metrics: [
+      { value: "60%", label: "efficiency gain" },
+      { value: "REMOTE", label: "Ghana delivery" },
+      { value: "LIVE", label: "production site" },
+    ],
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "Node.js"],
-    image: symergyPreview,
+    visual: "performance",
     live: "https://symergygh.com",
   },
 ];
@@ -198,56 +233,78 @@ const agentDrivenWorkflow = [
 ];
 
 function ProjectVisual({ project }) {
-  if (project.image) {
-    return (
-      <div className="project-image-wrap">
-        <img src={project.image} alt={`${project.title} product preview`} />
-      </div>
-    );
-  }
-
-  if (project.visual === "telegram") {
-    return (
-      <div className="project-visual telegram-visual" aria-hidden="true">
-        <div className="phone-shell">
-          <div className="phone-status">
-            <span>Mini app</span>
-            <span>•••</span>
-          </div>
-          <div className="phone-card phone-card-accent">Live product</div>
-          <div className="phone-card">Authenticated user</div>
-          <div className="phone-action">Open workflow</div>
-        </div>
-        <div className="floating-metric">
-          <strong>1K+</strong>
-          <span>active users</span>
-        </div>
-      </div>
-    );
-  }
+  const visualCopy = {
+    system: {
+      label: "shared workspace",
+      note: "one pattern / many modules",
+      axis: "service flow",
+    },
+    tenant: {
+      label: "tenant context",
+      note: "same product / isolated data",
+      axis: "organization boundary",
+    },
+    telegram: {
+      label: "embedded mini app",
+      note: "authenticated / in Telegram",
+      axis: "live user flow",
+    },
+    ai: {
+      label: "analysis workspace",
+      note: "document in / insight out",
+      axis: "structured AI output",
+    },
+    performance: {
+      label: "product interface",
+      note: "lighter render / faster flow",
+      axis: "API to screen",
+    },
+  }[project.visual];
 
   return (
     <div
-      className={`project-visual architecture-visual ${project.visual}`}
+      className={`project-blueprint blueprint-${project.visual}`}
       aria-hidden="true"
     >
-      <div className="architecture-head">
-        <span>
-          {project.visual === "tenant"
-            ? "Tenant-aware flow"
-            : "Service architecture"}
-        </span>
-        <i></i>
-      </div>
-      <div className="architecture-grid">
-        <span>Product UI</span>
-        <span>API gateway</span>
-        <span>
-          {project.visual === "tenant" ? "Tenant context" : "Core service"}
-        </span>
-        <span>PostgreSQL</span>
-        <span>Redis cache</span>
-        <span>Events</span>
+      <span className="blueprint-note note-primary">{visualCopy.note}</span>
+      <span className="blueprint-note note-secondary">{visualCopy.axis}</span>
+      <div className="blueprint-browser">
+        <div className="blueprint-chrome">
+          <div className="blueprint-dots">
+            <i></i>
+            <i></i>
+            <i></i>
+          </div>
+          <span></span>
+          <b>{visualCopy.label}</b>
+        </div>
+        <div className="blueprint-body">
+          <div className="blueprint-sidebar">
+            <strong>KM</strong>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+          </div>
+          <div className="blueprint-dashboard">
+            <div className="blueprint-toolbar">
+              <i></i>
+              <i></i>
+            </div>
+            <div className="blueprint-stat-row">
+              <i></i>
+              <i></i>
+              <i></i>
+            </div>
+            <div className="blueprint-chart">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -400,38 +457,66 @@ function App() {
           <div className="project-list">
             {projects.map((project) => (
               <article className="project-card" key={project.title}>
-                <div className="project-copy">
+                <header className="project-card-header">
                   <div className="project-meta">
-                    <span>{project.number}</span>
+                    <span>{project.number} / 05</span>
                     <p>{project.eyebrow}</p>
                   </div>
-                  <h3>{project.title}</h3>
-                  <p className="project-summary">{project.description}</p>
-                  <div className="project-highlight">
-                    <strong>{project.metric.value}</strong>
-                    <span>{project.metric.label}</span>
+                  <a
+                    className="project-live"
+                    href={project.live}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`View ${project.title} live`}
+                  >
+                    View live <FiArrowUpRight />
+                  </a>
+                </header>
+
+                <div className="project-showcase">
+                  <div className="project-intro">
+                    <h3>{project.title}</h3>
+                    <p className="project-summary">{project.description}</p>
+                    <div
+                      className="project-metrics"
+                      aria-label="Project highlights"
+                    >
+                      {project.metrics.map((metric) => (
+                        <div key={metric.label}>
+                          <strong>{metric.value}</strong>
+                          <span>{metric.label}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                  <dl className="project-details">
-                    <div>
-                      <dt>Contribution</dt>
-                      <dd>{project.contribution}</dd>
-                    </div>
-                    <div>
-                      <dt>Outcome</dt>
-                      <dd>{project.outcome}</dd>
-                    </div>
-                  </dl>
+                  <ProjectVisual project={project} />
+                </div>
+
+                <dl className="project-case-grid">
+                  <div>
+                    <span>01</span>
+                    <dt>Challenge</dt>
+                    <dd>{project.challenge}</dd>
+                  </div>
+                  <div>
+                    <span>02</span>
+                    <dt>Approach</dt>
+                    <dd>{project.contribution}</dd>
+                  </div>
+                  <div>
+                    <span>03</span>
+                    <dt>Outcome</dt>
+                    <dd>{project.outcome}</dd>
+                  </div>
+                </dl>
+
+                <footer className="project-card-footer">
                   <div className="tag-list">
                     {project.stack.map((item) => (
                       <span key={item}>{item}</span>
                     ))}
                   </div>
                   <div className="project-links">
-                    {project.live && (
-                      <a href={project.live} target="_blank" rel="noreferrer">
-                        Live product <FiArrowUpRight />
-                      </a>
-                    )}
                     {project.repo && (
                       <a href={project.repo} target="_blank" rel="noreferrer">
                         <FiGithub /> Source
@@ -443,8 +528,7 @@ function App() {
                       </span>
                     )}
                   </div>
-                </div>
-                <ProjectVisual project={project} />
+                </footer>
               </article>
             ))}
           </div>
