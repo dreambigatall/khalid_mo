@@ -39,6 +39,7 @@ const projects = [
       "Delivered full-stack features across Next.js and NestJS, designed and consumed service APIs, shaped database logic, and applied Redis caching to frequently accessed endpoints.",
     outcome:
       "Production SaaS work across complex business domains and cross-service data flows.",
+    metric: { value: "PROD", label: "multi-module SaaS" },
     stack: ["Next.js", "NestJS", "TypeScript", "PostgreSQL", "Redis", "Docker"],
     visual: "system",
     privateWork: true,
@@ -53,6 +54,7 @@ const projects = [
       "Built frontend and backend modules, handled tenant-aware domain logic, improved reusable service boundaries, and supported efficient onboarding for new organizations.",
     outcome:
       "A maintainable multi-tenant foundation for client-facing CRM workflows.",
+    metric: { value: "MULTI", label: "tenant architecture" },
     stack: ["NestJS", "Next.js", "PostgreSQL", "Redis", "Microservices"],
     visual: "tenant",
     privateWork: true,
@@ -66,6 +68,7 @@ const projects = [
     contribution:
       "Owned requirements, authentication, interface development, API integration, deployment, testing, and client handoff.",
     outcome: "More than 1,000 active users across deployed mini apps.",
+    metric: { value: "1K+", label: "active users" },
     stack: ["React", "Node.js", "TypeScript", "Telegram Bot API"],
     visual: "telegram",
   },
@@ -79,6 +82,7 @@ const projects = [
       "Built the product flow, authentication, data layer, API integration, validation, and recruiter-facing interface.",
     outcome:
       "A working AI product that connects document analysis with a practical hiring workflow.",
+    metric: { value: "AI", label: "recruiter workflow" },
     stack: ["React", "Node.js", "MongoDB", "Supabase", "Gemini API"],
     image: aiResumeAnalyzer,
     live: "https://ai-resume-analayzer-1.onrender.com/",
@@ -93,6 +97,7 @@ const projects = [
     contribution:
       "Translated Figma designs into production interfaces, integrated backend APIs, and removed rendering and data-flow bottlenecks.",
     outcome: "Improved interface rendering and system efficiency by 60%.",
+    metric: { value: "60%", label: "efficiency gain" },
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "Node.js"],
     image: symergyPreview,
     live: "https://symergygh.com",
@@ -253,6 +258,7 @@ function App() {
 
   return (
     <div className="site-shell">
+      <div className="scroll-progress" aria-hidden="true"></div>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Khalid Mohammed, home">
           <span className="brand-mark">KM</span>
@@ -279,6 +285,9 @@ function App() {
       <main id="top">
         <section className="hero section-pad">
           <div className="hero-copy">
+            <p className="hero-hand-note">
+              Hello, I’m Khalid. I build the system behind the screen.
+            </p>
             <p className="availability">
               <span></span> Addis Ababa · Available for remote opportunities
             </p>
@@ -360,7 +369,10 @@ function App() {
             <span>01</span> What I do
           </div>
           <div className="intro-statement">
-            <h2>Software that understands the operation behind the screen.</h2>
+            <h2>
+              Software that understands{" "}
+              <span className="ink-chip">the operation</span> behind the screen.
+            </h2>
             <p>
               My strongest work sits where product experience, business logic,
               and reliable infrastructure meet. I turn complex workflows into
@@ -375,7 +387,9 @@ function App() {
               <div className="section-kicker">
                 <span>02</span> Selected work
               </div>
-              <h2>Proof over project lists.</h2>
+              <h2>
+                Proof over <span className="ink-chip">project lists.</span>
+              </h2>
             </div>
             <p>
               Five projects that show product scope, engineering decisions, and
@@ -393,6 +407,10 @@ function App() {
                   </div>
                   <h3>{project.title}</h3>
                   <p className="project-summary">{project.description}</p>
+                  <div className="project-highlight">
+                    <strong>{project.metric.value}</strong>
+                    <span>{project.metric.label}</span>
+                  </div>
                   <dl className="project-details">
                     <div>
                       <dt>Contribution</dt>
@@ -438,7 +456,11 @@ function App() {
               <div className="section-kicker">
                 <span>03</span> Experience
               </div>
-              <h2>Built in real delivery environments.</h2>
+              <h2>
+                Built in real{" "}
+                <span className="ink-chip ink-chip-light">delivery</span>{" "}
+                environments.
+              </h2>
             </div>
             <p>
               Product teams, remote collaboration, freelance ownership, and
