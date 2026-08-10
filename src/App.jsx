@@ -774,6 +774,7 @@ function App() {
 
         <section
           className="agentic-manifesto section-pad"
+          hidden
           aria-label="Agentic engineering philosophy"
         >
           <div className="manifesto-index">04 / BUILD PHILOSOPHY</div>

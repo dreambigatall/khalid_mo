@@ -3671,3 +3671,7 @@ body::before {
     transition: none;
   }
 }
+
+.agentic-manifesto[hidden] {
+  display: none !important;
+}
