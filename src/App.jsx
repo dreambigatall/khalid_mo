@@ -793,7 +793,7 @@ function App() {
           </div>
         </section>
 
-        <section className="agentic-section section-pad">
+        <section className="agentic-section section-pad" hidden>
           <div className="agentic-panel">
             <div className="agentic-copy">
               <div className="section-kicker light">

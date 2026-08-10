@@ -3675,3 +3675,7 @@ body::before {
 .agentic-manifesto[hidden] {
   display: none !important;
 }
+
+.agentic-section[hidden] {
+  display: none !important;
+}
