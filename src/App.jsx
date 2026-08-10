@@ -376,49 +376,95 @@ function App() {
             aria-label="Khalid's engineering capability map"
           >
             <div className="system-topline">
-              <span>BUILD MAP / 2026</span>
-              <span className="pulse">ONLINE</span>
+              <span>ENGINEERING RUN / 2026</span>
+              <span className="pulse">ACTIVE</span>
             </div>
-            <div className="system-core">
-              <div className="core-ring ring-one"></div>
-              <div className="core-ring ring-two"></div>
-              <div className="core-node">
-                <strong>PRODUCT</strong>
-                <span>from idea to operation</span>
+            <div className="agent-run-summary">
+              <span>LIVE BUILD SYSTEM</span>
+              <strong>Context in. Verified product out.</strong>
+              <p>
+                Coding agents accelerate the loop. Product judgment, system
+                boundaries, and final approval stay human.
+              </p>
+            </div>
+            <div className="hero-agent-pipeline" aria-hidden="true">
+              <div className="pipeline-path">
+                <i></i>
               </div>
-            </div>
-            <div className="system-nodes">
-              <div>
+              <div className="pipeline-stage is-complete">
                 <span>01</span>
-                <strong>Interface</strong>
-                <small>React · Next.js</small>
+                <strong>Context</strong>
+                <small>rules + code</small>
               </div>
-              <div>
+              <div className="pipeline-stage pipeline-agents is-active">
                 <span>02</span>
-                <strong>Services</strong>
-                <small>NestJS · Node.js</small>
+                <strong>Agents</strong>
+                <small>Codex · Claude · Cursor</small>
               </div>
-              <div>
+              <div className="pipeline-stage is-complete">
                 <span>03</span>
-                <strong>Intelligence</strong>
-                <small>AI · Automation</small>
+                <strong>Build</strong>
+                <small>product slice</small>
+              </div>
+              <div className="pipeline-stage is-active">
+                <span>04</span>
+                <strong>Verify</strong>
+                <small>tests + review</small>
+              </div>
+              <div className="pipeline-stage">
+                <span>05</span>
+                <strong>Ship</strong>
+                <small>human approved</small>
+              </div>
+            </div>
+            <div className="hero-run-status">
+              <div>
+                <span>BUILD</span>
+                <strong>PASSING</strong>
+                <i></i>
               </div>
               <div>
-                <span>04</span>
-                <strong>Data</strong>
-                <small>Postgres · Redis</small>
+                <span>TESTS</span>
+                <strong>RUNNING</strong>
+                <i></i>
+              </div>
+              <div>
+                <span>REVIEW</span>
+                <strong>HUMAN</strong>
+                <i></i>
+              </div>
+              <div>
+                <span>DEPLOY</span>
+                <strong>READY</strong>
+                <i></i>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="proof-strip" aria-label="Career highlights">
-          {proofPoints.map((point) => (
-            <div key={point.label}>
-              <strong>{point.value}</strong>
-              <span>{point.label}</span>
+        <section
+          className="engineering-signal"
+          aria-label="Engineering impact signal"
+        >
+          <div className="signal-label">
+            <span></span> SYSTEM SIGNAL / LIVE
+          </div>
+          <div className="signal-track">
+            <div>
+              {proofPoints.map((point) => (
+                <p key={point.label}>
+                  <strong>{point.value}</strong> {point.label}
+                </p>
+              ))}
             </div>
-          ))}
+            <div aria-hidden="true">
+              {proofPoints.map((point) => (
+                <p key={`repeat-${point.label}`}>
+                  <strong>{point.value}</strong> {point.label}
+                </p>
+              ))}
+            </div>
+          </div>
         </section>
 
         <section className="intro section-pad">
@@ -572,6 +618,26 @@ function App() {
           </div>
         </section>
 
+        <section
+          className="agentic-manifesto section-pad"
+          aria-label="Agentic engineering philosophy"
+        >
+          <div className="manifesto-index">04 / BUILD PHILOSOPHY</div>
+          <p>Tools that generate code are common.</p>
+          <h2>
+            Systems that ship
+            <br />
+            <span>responsibly are not.</span>
+          </h2>
+          <div className="manifesto-foot">
+            <span>CONTEXT</span>
+            <i></i>
+            <span>VERIFICATION</span>
+            <i></i>
+            <span>HUMAN CONTROL</span>
+          </div>
+        </section>
+
         <section className="agentic-section section-pad">
           <div className="agentic-panel">
             <div className="agentic-copy">
@@ -615,33 +681,103 @@ function App() {
             </div>
 
             <div
-              className="agent-tool-row"
-              aria-label="Agent-driven development tools"
+              className="agent-control-room"
+              aria-label="Live agent-driven engineering run"
             >
-              <article>
-                <span className="agent-tool-status">Primary agent</span>
-                <strong>Codex</strong>
+              <div className="control-rail">
+                <div className="control-rail-head">
+                  <span>RUN / 01</span>
+                  <i></i>
+                  <b>ACTIVE</b>
+                </div>
+                <h4>Ship a production-ready product slice.</h4>
                 <p>
-                  Repository-scale implementation, debugging, testing, and
-                  delivery.
+                  A bounded task moves through context, implementation,
+                  verification, and human approval.
                 </p>
-              </article>
-              <article>
-                <span className="agent-tool-status">Thinking partner</span>
-                <strong>Claude</strong>
-                <p>
-                  Architecture exploration, deep analysis, and critical code
-                  review.
-                </p>
-              </article>
-              <article>
-                <span className="agent-tool-status">Editor workflow</span>
-                <strong>Cursor</strong>
-                <p>
-                  Fast in-editor iteration, navigation, refactoring, and
-                  codebase context.
-                </p>
-              </article>
+                <div className="control-checks">
+                  <div className="is-done">
+                    <span>01</span>
+                    <p>Context loaded</p>
+                    <FiCheck />
+                  </div>
+                  <div className="is-done">
+                    <span>02</span>
+                    <p>Agent selected</p>
+                    <FiCheck />
+                  </div>
+                  <div className="is-running">
+                    <span>03</span>
+                    <p>Tests running</p>
+                    <i></i>
+                  </div>
+                  <div>
+                    <span>04</span>
+                    <p>Human approval</p>
+                    <i></i>
+                  </div>
+                  <div>
+                    <span>05</span>
+                    <p>Deployment</p>
+                    <i></i>
+                  </div>
+                </div>
+              </div>
+
+              <div className="control-console">
+                <div className="console-topline">
+                  <span>AGENT OPERATIONS</span>
+                  <span>HUMAN IN CONTROL</span>
+                </div>
+                <div className="console-task">
+                  <small>SELECTED TASK</small>
+                  <h4>Build, test, and review a complete product workflow.</h4>
+                  <p>
+                    Scope is explicit. Permissions are bounded. Output must pass
+                    the release checks.
+                  </p>
+                </div>
+                <div className="console-agents">
+                  <article className="is-primary">
+                    <span>PRIMARY AGENT</span>
+                    <strong>Codex</strong>
+                    <small>Implementation + verification</small>
+                  </article>
+                  <article>
+                    <span>REVIEW PARTNER</span>
+                    <strong>Claude</strong>
+                    <small>Architecture + critique</small>
+                  </article>
+                  <article>
+                    <span>EDITOR LOOP</span>
+                    <strong>Cursor</strong>
+                    <small>Navigation + iteration</small>
+                  </article>
+                </div>
+                <div className="console-verification">
+                  <div>
+                    <span>BUILD</span>
+                    <i>
+                      <b style={{ width: "100%" }}></b>
+                    </i>
+                    <strong>PASS</strong>
+                  </div>
+                  <div>
+                    <span>TESTS</span>
+                    <i>
+                      <b style={{ width: "78%" }}></b>
+                    </i>
+                    <strong>RUNNING</strong>
+                  </div>
+                  <div>
+                    <span>REVIEW</span>
+                    <i>
+                      <b style={{ width: "42%" }}></b>
+                    </i>
+                    <strong>HUMAN</strong>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div
