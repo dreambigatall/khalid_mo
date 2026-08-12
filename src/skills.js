@@ -16,6 +16,9 @@ export const skills = [
         'git',
         'supabase',
         'firebase',
+        'chakra UI',
+        'shadcn UI',
+        'postman',
       ],
     },
     skillTwo: {
